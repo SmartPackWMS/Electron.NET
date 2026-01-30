@@ -1,4 +1,4 @@
-{
+﻿{
   "name": "$(ElectronPackageId)",
   "productName": "$(ElectronTitle)",
   "build": {
@@ -37,7 +37,7 @@
     "image-size": "^1.2.1",
     "portscanner": "^2.2.0",
     "socket.io": "^4.8.1",
-    "electron-host-hook": "file:./ElectronHostHook"
+    "electron-host-hook": "file:./bin/.electron/ElectronHostHook"
   },
   "devDependencies": {
     "@types/node": "^22.18",
