@@ -648,6 +648,12 @@ module.exports = (socket, app) => {
     socket.on("browserWindow-setBrowserView", (id, browserViewId) => {
         getWindowById(id).setBrowserView((0, browserView_1.browserViewMediateService)(browserViewId));
     });
+    socket.on("browserWindow-setTitleBarOverlay", (id, options) => {
+        const win = getWindowById(id);
+        if (win && win.setTitleBarOverlay) {
+            win.setTitleBarOverlay(options);
+        }
+    });
     function getWindowById(id) {
         for (let index = 0; index < windows.length; index++) {
             const element = windows[index];
