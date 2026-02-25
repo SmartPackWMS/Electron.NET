@@ -1221,4 +1221,18 @@ public class BrowserWindow : ApiBase
         // This message name does not match the default ApiBase naming convention.
         BridgeConnector.Socket.Emit("browserWindow-setBrowserView", Id, browserView.Id);
     }
+
+    /// <summary>
+    /// Updates the title bar overlay colors on Windows (requires titleBarStyle: hidden).
+    /// </summary>
+    /// <param name="color">CSS color string for the overlay background (e.g. "#333333")</param>
+    /// <param name="symbolColor">CSS color string for the overlay symbols (e.g. "#ffffff")</param>
+    [SupportedOSPlatform("windows")]
+    [SupportedOSPlatform("linux")]
+    public void SetTitleBarOverlay(string color, string symbolColor)
+    {
+        // This message name does not match the default ApiBase naming convention.
+        BridgeConnector.Socket.Emit("browserWindow-setTitleBarOverlay", Id,
+            new { color, symbolColor });
+    }
 }

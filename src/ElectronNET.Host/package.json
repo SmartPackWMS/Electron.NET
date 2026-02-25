@@ -1,4 +1,4 @@
-{
+﻿{
   "name": "electron.net.host",
   "version": "1.0.0",
   "description": "Electron-Host for Electron.NET.",
@@ -25,7 +25,7 @@
   },
   "devDependencies": {
     "@types/node": "^22.18",
-    "electron": "^30.0.3",
+    "electron": "^38.2.2",
     "eslint": "^9.39.1",
     "typescript": "^5.9.3"
   }
